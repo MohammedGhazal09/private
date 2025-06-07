@@ -6,16 +6,16 @@
   font-style: normal;
 }
 
-/* Snap scroll support at document level */
+/* Remove document-level snap scrolling to avoid conflicts */
 html {
   scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
   height: 100%;
 }
 
 body {
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 /* Custom scrollbar for better UX */

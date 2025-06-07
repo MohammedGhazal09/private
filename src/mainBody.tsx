@@ -8,32 +8,27 @@ import PortfolioItems from "./Components/subComponents/portfolioItems";
 
 export default function MainBody() {
     return(
-        <div className="select-none min-h-screen bg-[#0b0c1b]">
+        <div className="select-none min-h-screen bg-[#0b0c1b] snap-y snap-mandatory overflow-y-scroll h-screen">
             <Sidebar/>
             
-            {/* Home Section */}
-            <section className="relative  bg-[#0b0c1b] snap-start snap-always">
+            <section className="relative bg-[#0b0c1b] snap-start ">
                 <Header/>
                 <LandingSection/>
             </section>
             
-            {/* Skills Section */}
             <section className="h-screen snap-start">
                 <FirstMountain/>
             </section>
             
-            {/* Projects Section */}
             <section className="h-screen snap-start">
                 <SecondMountain/>
             </section>
             
-            {/* Portfolio Section */}
             <section className=" snap-start">
                 <Portfolio/>
             </section>
-            <section className="h-screen snap-start">
-                <PortfolioItems/>
-            </section>
+            
+            <PortfolioItems/>
         </div>
     )
 }

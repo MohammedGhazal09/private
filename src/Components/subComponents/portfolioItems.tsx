@@ -27,20 +27,23 @@ export default function PortfolioItems() {
   ];
 
   return (
-    <div className="w-full snap-start snap-y snap-mandatory overflow-x-hidden scrollbar-hide bg-[#0a192f]">
+    <div className="w-full bg-[#0a192f]" style={{scrollSnapStop: 'normal'}}>
       {portfolioContent.map((item: PortfolioItem, index: number) => (
-        <div key={index} className={`snap-start snap-y snap-mandatory w-full flex flex-wrap justify-center items-center gap-x-[3%] h-screen snap-center`}>
+        <div 
+          key={index} 
+          className="w-full flex flex-wrap justify-center items-center gap-x-[3%] h-screen snap-start relative" 
+        >
           <img
             src={item.img}
             alt={`${item.title}`}
-            className={`h-[30%] aspect-[3/2] rounded-2xl`}
+            className="h-[30%] aspect-[3/2] rounded-2xl pointer-events-none"
           />
-          <div className={`max-[803px]:items-center flex flex-col justify-center gap-y-[20px] pb-[50px] tracking-widest z-10`}>
-            <h2 className=" text-5xl font-semibold text-white">{item.title}</h2>
-            <p className="max-[803px]:text-center max-[450px]:px-24 text-gray-400 w-[450px] text-wrap ">{item.description}</p>
+          <div className="max-[803px]:items-center flex flex-col justify-center gap-y-[20px] pb-[50px] tracking-widest z-10">
+            <h2 className="text-5xl font-semibold text-white">{item.title}</h2>
+            <p className="max-[803px]:text-center max-[450px]:px-24 text-gray-400 w-[450px] text-wrap">{item.description}</p>
             <a
               href={item.demoLink}
-              className=" py-[7px] px-[50px] bg-[#f8a301] rounded-xl text-center w-[200px]"
+              className="py-[7px] px-[50px] bg-[#f8a301] rounded-xl text-center w-[200px] hover:bg-[#e6920e] transition-colors"
               target="_blank"
               rel="noopener noreferrer"
             >
