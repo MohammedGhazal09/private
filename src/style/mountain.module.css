@@ -8,6 +8,14 @@
         transform: translateX(0%);
     }
 }
+
+.starsBackground {
+    background-image: url('/src/assets/Imgs/stars.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 @media (max-width: 1250px) {
     .mountainContainer{
         height: 80vh;

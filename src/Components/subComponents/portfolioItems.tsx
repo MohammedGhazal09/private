@@ -27,9 +27,9 @@ export default function PortfolioItems() {
   ];
 
   return (
-    <div className="w-full  snap-y snap-mandatory overflow-x-hidden scrollbar-hide bg-[#0a192f]">
+    <div className="w-full snap-start snap-y snap-mandatory overflow-x-hidden scrollbar-hide bg-[#0a192f]">
       {portfolioContent.map((item: PortfolioItem, index: number) => (
-        <div key={index} className={`w-full flex flex-wrap justify-center items-center gap-x-[3%] h-screen snap-center`}>
+        <div key={index} className={`snap-start snap-y snap-mandatory w-full flex flex-wrap justify-center items-center gap-x-[3%] h-screen snap-center`}>
           <img
             src={item.img}
             alt={`${item.title}`}

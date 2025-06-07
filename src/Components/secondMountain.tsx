@@ -22,7 +22,7 @@ export default function SecondMountain() {
         };
     }, []);
     return(
-        <div id='skills' ref={ref} className={`${mountainStyle.firstMountainContainer} relative w-full h-[100.5vh] bg-[url(/src/assets/Imgs/stars.webp)] overflow-x-hidden`}>
+        <div id='skills' ref={ref} className={`${mountainStyle.firstMountainContainer} relative w-full h-[100vh] bg-[url(./src/assets/Imgs/stars.webp)] overflow-x-hidden`}>
             <div ref={firstMountainRef} className={`${isVisible ? mountainStyle.starsContainer: 'hidden'}`}>
                 <img loading='lazy' src={sun} alt="planets" className='z-1 px-[50px]'/>
                 <h2 className="text-white text-center w-full text-[8vw] font-bold z-1 mb-[5%]">My Projects</h2>
