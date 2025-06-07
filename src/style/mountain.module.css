@@ -1,0 +1,34 @@
+@keyframes starsContainer {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+@media (max-width: 1250px) {
+    .mountainContainer{
+        height: 80vh;
+    }
+}
+@media (max-width: 650px) {
+    .mountainContainer{
+        height: 50vh;
+    }
+    .starsContainer h2{
+        font-size: 2.5rem;
+    }
+}
+.starsContainer {
+    position: absolute;
+    display: flex;
+    gap: 10px 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    animation: starsContainer 1.5s ease-in-out;
+}

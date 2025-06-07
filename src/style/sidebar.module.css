@@ -1,0 +1,123 @@
+@keyframes openBox {
+    0% {
+      width: 50px;
+      height: 50px;
+      top: 20px;
+      left: 3%; 
+    }
+    100% {
+      width: 500px;
+      height: 100dvh;
+      top: 0px;
+      left: 0px;
+    }
+  }
+  @keyframes closeBox {
+    0% {
+      width: 500px;
+      height: 100dvh;
+      top: 0;
+      left: 0;  
+      z-index: 5;
+      border-radius: 0;
+    }
+    90% {
+      height: 7vh;
+      width: 60px;
+    }
+    100% {
+      width: 50px;
+      height: 50px;
+      border-radius: 12px;
+      background-color: #0b0c1b;
+    }
+  }
+  @keyframes sidebarTxt {
+    0% {
+      opacity: 0;
+      transform: translateY(100%);
+      z-index: 5;
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+      z-index: 5;
+    }
+  }
+  .openBox{
+    animation: openBox .8s ease-in-out;
+    width: 500px;
+    height: 100dvh;
+    top: 0px;
+  }
+  .closeBox{
+    animation: closeBox .8s ease-in-out;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    transition: 2s;
+    top: 20px;
+    left: 3%;
+  }
+  .sidebarTxt{
+    animation: sidebarTxt 1.8s ease-in-out;
+  }
+  
+  @media (max-width: 950px){
+    @keyframes openBox {
+      0% {
+        width: 50px;
+        height: 50px;
+        top: 20px;
+        left: 3%; 
+      }
+      100% {
+        width: 50vw;
+        height: 100dvh;
+        top: 0px;
+        left: 0px;
+      }
+    }
+    @keyframes closeBox {
+      0% {
+        width: 50vw;
+        height: 100dvh;
+        top: 0px;
+        left: 0%;  
+        z-index: 5;
+        border-radius: 0;
+      }
+      90% {
+        width: 4vw;
+        height: 20px;
+      }
+      100% {
+        width: 50px;
+        height: 0px;
+        z-index: 5;
+        border-radius: 12px;
+        background-color: #0b0c1b;
+      }
+    }
+    .openBox{
+      width: 50vw;
+    }
+    .sidebarTxt li a{
+      font-size: 1.5rem;
+    }
+  }
+  @media (max-width: 550px) {
+    .closeBox{
+      width: 30px;
+      height: 30px;
+      top: 25px;
+      left: 15px;
+    }
+    .sidebarBtn{
+      top: 15px;
+      left: 5px;
+    }
+    .sidebarBtn *{
+      width: 15px;
+    }
+  }

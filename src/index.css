@@ -1,0 +1,7 @@
+@import "tailwindcss";
+@font-face {
+  font-family: 'Rouge Script';
+  src: url('./fonts/RougeScript-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

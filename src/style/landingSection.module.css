@@ -1,0 +1,143 @@
+@keyframes landingSection{
+    0% {
+        opacity: 0;
+        transform: translateX(-200%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes personalImg {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes scroll-right {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(50%);
+    }
+}
+
+@media (max-width: 1450px) {
+    .landingSection h2{
+        font-size: 2.3rem;
+    }
+    .landingSection h3{
+        font-size: 1.8rem;
+    }
+    .personalImg img{
+        width: 400px;
+    }
+    .personalImg div{
+        height: 400px;
+        top: 50px;
+    }
+    .scroll{
+        width: 45px;
+        height: 45px
+    }
+}
+@media (max-width: 1150px) {
+    .landingSection h2{
+        font-size: 2rem;
+    }
+    .landingSection h3{
+        font-size: 1.5rem;
+    }
+    .personalImg img{
+        width: 300px;
+    }
+    .personalImg div{
+        height: 300px;
+        top: 30px;
+    }
+        .btnContainer a{
+        font-size: 1rem;
+    }
+        .scroll{
+        width: 40px;
+        height: 40px
+    }
+    .marquee{
+        font-size: 10rem;
+    }
+}
+@media (max-width: 900px) {
+    .landingConainer{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 50px 0;
+    }
+    .landingSection{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .landingSection h2{
+        font-size: 2.5rem;
+    }
+    .landingSection h3{
+        font-size: 2rem;
+    }
+    .personalImg img{
+        width: 300px;
+    }
+    .personalImg div{
+        height: 300px;
+        top: 30px;
+    }
+    .btnContainer{
+        justify-content: center;
+        margin-top: 30px;
+    }
+        .btnContainer a{
+        font-size: 0.9rem;
+    }
+    .scroll{
+        text-align: center;
+    }
+    .marquee{
+        font-size: 5rem;
+    }
+}
+@media (max-width: 750px) {
+    .landingSection h2{
+        font-size: 1.2rem;
+    }
+    .landingSection h3{
+        font-size: 0.8rem;
+    }
+        .btnContainer a{
+        font-size: 0.8rem;
+    }
+        .scroll{
+        width: 35px;
+        height: 35px;
+    }
+}
+@media (max-width: 550px) {
+    .btnContainer a{
+        font-size: 0.6rem;
+    }
+}
+.landingSection{
+    animation: landingSection 1.5s ease-in-out;
+    max-width: fit-content;
+}
+.personalImg{
+    animation: personalImg 2s ease-in-out;
+}
+.scrollRight{
+    animation: scroll-right 15s linear infinite;
+    display: inline-block;
+    white-space: nowrap;
+}
+
