@@ -1,5 +1,3 @@
-
-
 .contact {
   height: 100%;
   max-width: 1366px;
@@ -9,41 +7,41 @@
   gap: 50px;
 }
 
-.contact .textContainer {
+.textContainer {
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 40px;
 }
 
-.contact .textContainer h1 {
+.textContainer h1 {
   font-size: 100px;
   line-height: 88px;
 }
 
-.contact .textContainer .item {
+.item {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.contact .textContainer .item h2 {
+.item h2 {
   font-size: 20px;
   font-weight: 600;
   color: orange;
 }
 
-.contact .textContainer .item span {
+.item span {
   font-weight: 300;
   font-size: 16px;
 }
 
-.contact .formContainer {
+.formContainer {
   flex: 1;
   position: relative;
 }
 
-.contact .formContainer .contactSvg {
+.contactSvg {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -52,7 +50,7 @@
   opacity: 0.1;
 }
 
-.contact .formContainer form {
+.form {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -60,8 +58,8 @@
   z-index: 1;
 }
 
-.contact .formContainer form input,
-.contact .formContainer form textarea {
+.input,
+.textarea {
   padding: 20px;
   background-color: transparent;
   border: 1px solid white;
@@ -72,24 +70,24 @@
   transition: border-color 0.3s ease;
 }
 
-.contact .formContainer form input:focus,
-.contact .formContainer form textarea:focus {
+.input:focus,
+.textarea:focus {
   outline: none;
   border-color: orange;
 }
 
-.contact .formContainer form input::placeholder,
-.contact .formContainer form textarea::placeholder {
+.input::placeholder,
+.textarea::placeholder {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.contact .formContainer form input:disabled,
-.contact .formContainer form textarea:disabled {
+.input:disabled,
+.textarea:disabled {
   opacity: 0.6;
   cursor: not-allowed;
 }
 
-.contact .formContainer form button {
+.button {
   padding: 20px;
   border: none;
   background-color: orange;
@@ -101,18 +99,18 @@
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.contact .formContainer form button:hover:not(:disabled) {
+.button:hover:not(:disabled) {
   background-color: #ff8800;
   transform: translateY(-2px);
 }
 
-.contact .formContainer form button:disabled {
+.button:disabled {
   background-color: #666;
   cursor: not-allowed;
   transform: none;
 }
 
-.contact .formContainer form .error-message {
+.errorMessage {
   background-color: rgba(255, 0, 0, 0.1);
   border: 1px solid #ff4444;
   color: #ff4444;
@@ -122,7 +120,7 @@
   font-size: 14px;
 }
 
-.contact .formContainer form .success-message {
+.successMessage {
   background-color: rgba(0, 255, 0, 0.1);
   border: 1px solid #44ff44;
   color: #44ff44;
@@ -140,35 +138,35 @@
     flex-direction: column;
   }
   
-  .contact .textContainer {
+  .textContainer {
     gap: 20px;
     text-align: center;
     align-items: center;
     margin-top: 70px;
   }
   
-  .contact .textContainer h1 {
+  .textContainer h1 {
     font-size: 36px;
     line-height: 40px;
   }
   
-  .contact .formContainer {
+  .formContainer {
     padding: 50px 20px;
     width: 100%;
   }
   
-  .contact .formContainer .contactSvg {
+  .contactSvg {
     width: 250px;
     height: 250px;
   }
   
-  .contact .formContainer form input,
-  .contact .formContainer form textarea {
+  .input,
+  .textarea {
     padding: 15px;
     font-size: 14px;
   }
   
-  .contact .formContainer form button {
+  .button {
     padding: 15px;
     font-size: 14px;
   }

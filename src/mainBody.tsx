@@ -31,7 +31,7 @@ export default function MainBody() {
             
             <PortfolioItems/>
 
-            <section className="h-screen snap-start">
+            <section className="relative h-screen snap-start">
                 <Contact/>
                 </section>
         </div>
