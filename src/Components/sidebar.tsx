@@ -3,8 +3,8 @@ import github from "../assets/Imgs/github.webp";
 import linkedin from "../assets/Imgs/LinkedInImg.webp";
 import mail from "../assets/Imgs/gmail.webp";
 import sidebarStyle from "../style/sidebar.module.css";
-
 import { useState, useEffect, useRef } from "react";
+
 
 export default function Sidebar() {
   const [sidebaropen, setSidebar] = useState<boolean | null>(null);
@@ -55,7 +55,7 @@ export default function Sidebar() {
                 <div className={`${sidebaropen ? `rotate-[45deg] translate-y-[-5px]`:`rotate-[-0deg]`} duration-[0.5s] w-[20px] h-[2px] bg-black`}></div>
             </div>
 
-            <div ref={sidebarStyleRef} className={`${sidebarStyle.sidebarContainer} flex fixed w-[100%] h-screen`}>
+            <div ref={sidebarStyleRef} className={`${sidebarStyle.sidebarContainer} flex fixed w-[99%] h-screen`}>
                 <div ref={sidebarRef}
                     className={`${
                         sidebaropen === null 
