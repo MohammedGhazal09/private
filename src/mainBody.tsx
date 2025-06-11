@@ -22,7 +22,7 @@ export default function MainBody() {
                 <FirstMountain/>
             </section>
             
-            <section className="h-screen relative snap-start">
+            <section className="relative snap-start">
                 <Services/>
             </section>
             
