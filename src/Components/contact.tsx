@@ -1,7 +1,6 @@
 import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import emailjs from "@emailjs/browser";
-import styles from "./contact.module.css";
 
 interface Variants {
   [key: string]: {
@@ -23,8 +22,8 @@ const variants: Variants = {
     y: 0,
     opacity: 1,
     transition: {
-      duration: 0.5,
-      staggerChildren: 0.1,
+      duration: 7,
+      staggerChildren: 0.5,
     },
   },
 };
@@ -79,37 +78,38 @@ const Contact: React.FC = () => {
   return (
     <motion.div
       ref={ref}
-      className={styles.contact}
+      className="min-h-screen max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-8 lg:gap-12 px-4 sm:px-6 lg:px-8 py-8 lg:py-0"
       variants={variants}
       initial="initial"
       whileInView="animate"
     >
-      <motion.div className={styles.textContainer} variants={variants}>
-        <motion.h1 className="text-white" variants={variants}>Let's work together</motion.h1>
-        <motion.div className={styles.item} variants={variants}>
-          <h2>Mail</h2>
-          <span className="text-white">hello@react.dev</span>
+      <motion.div className="flex-1 flex flex-col gap-6 lg:gap-10 text-center lg:text-left" variants={variants}>
+        <motion.h1 className="text-white text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight" variants={variants}>
+          Let's work together
+        </motion.h1>
+        <motion.div className="flex flex-col gap-3" variants={variants}>
+          <h2 className="text-lg lg:text-xl font-semibold text-orange-500">Mail</h2>
+          <span className="text-white text-sm lg:text-base font-light">hello@react.dev</span>
         </motion.div>
-        <motion.div className={styles.item} variants={variants}>
-          <h2>Address</h2>
-          <span className="text-white">Hello street New York</span>
+        <motion.div className="flex flex-col gap-3" variants={variants}>
+          <h2 className="text-lg lg:text-xl font-semibold text-orange-500">Address</h2>
+          <span className="text-white text-sm lg:text-base font-light">Hello street New York</span>
         </motion.div>
-        <motion.div className={styles.item} variants={variants}>
-          <h2>Phone</h2>
-          <span className="text-white">+1 234 5678</span>
+        <motion.div className="flex flex-col gap-3" variants={variants}>
+          <h2 className="text-lg lg:text-xl font-semibold text-orange-500">Phone</h2>
+          <span className="text-white text-sm lg:text-base font-light">+1 234 5678</span>
         </motion.div>
       </motion.div>
       
-      <div className={styles.formContainer}>
+      <div className="flex-1 relative flex items-center justify-center w-full">
         <motion.div
-          className={styles.contactSvg}
+          className="absolute inset-0 flex items-center justify-center z-0"
           initial={{ opacity: 1 }}
           whileInView={{ opacity: 0 }}
           transition={{ delay: 6, duration: 1 }}
         >
           <svg 
-            width="450px" 
-            height="450px" 
+            className="w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 xl:w-[450px] xl:h-[450px]"
             viewBox="0 0 300 250"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -261,7 +261,7 @@ const Contact: React.FC = () => {
         <motion.form
           ref={formRef}
           onSubmit={sendEmail}
-          className={styles.form}
+          className="relative z-10 flex flex-col gap-4 lg:gap-5 w-full max-w-md lg:max-w-lg p-5 lg:p-6 rounded-xl bg-black bg-opacity-10 backdrop-blur-md border border-white border-opacity-10"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 7, duration: 1 }}
@@ -271,7 +271,7 @@ const Contact: React.FC = () => {
             required 
             placeholder="Name" 
             name="name"
-            className={styles.input}
+            className="w-full p-3 lg:p-4 bg-black bg-opacity-20 border border-white border-opacity-20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
             disabled={isSubmitting}
           />
           <input 
@@ -279,24 +279,28 @@ const Contact: React.FC = () => {
             required 
             placeholder="Email" 
             name="email"
-            className={styles.input}
+            className="w-full p-3 lg:p-4 bg-black bg-opacity-20 border border-white border-opacity-20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
             disabled={isSubmitting}
           />
           <textarea 
-            rows={8} 
+            rows={6} 
             placeholder="Message" 
             name="message"
-            className={styles.textarea}
+            className="w-full p-3 lg:p-4 bg-black bg-opacity-20 border border-white border-opacity-20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500 transition-all duration-300 resize-none disabled:opacity-50 disabled:cursor-not-allowed"
             required
             disabled={isSubmitting}
           />
-          <button type="submit" className={styles.button} disabled={isSubmitting}>
+          <button 
+            type="submit" 
+            className="w-full p-3 lg:p-4 bg-orange-500 hover:bg-orange-600 disabled:bg-orange-400 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 disabled:scale-100 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-transparent"
+            disabled={isSubmitting}
+          >
             {isSubmitting ? "Sending..." : "Submit"}
           </button>
           
           {error && (
             <motion.div 
-              className={styles.errorMessage}
+              className="p-3 bg-red-500 bg-opacity-20 border border-red-500 border-opacity-30 rounded-lg text-red-300 text-sm text-center"
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
@@ -307,7 +311,7 @@ const Contact: React.FC = () => {
           
           {success && (
             <motion.div 
-              className={styles.successMessage}
+              className="p-3 bg-green-500 bg-opacity-20 border border-green-500 border-opacity-30 rounded-lg text-green-300 text-sm text-center"
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}

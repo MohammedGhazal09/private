@@ -5,7 +5,8 @@ import FirstMountain from "./Components/firstMountain"
 import SecondMountain from "./Components/secondMountain"
 import Portfolio from "./Components/portfolio"
 import PortfolioItems from "./Components/subComponents/portfolioItems";
-import Contact from "./Components/contact/contact";
+import Contact from "./Components/contact";
+import Services from "./Components/services";
 
 export default function MainBody() {
     return(
@@ -19,6 +20,10 @@ export default function MainBody() {
             
             <section className="h-screen snap-start">
                 <FirstMountain/>
+            </section>
+            
+            <section className="h-screen relative snap-start">
+                <Services/>
             </section>
             
             <section className="h-screen snap-start">
